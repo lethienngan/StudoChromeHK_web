@@ -1,0 +1,68 @@
+@use "../../base.module.scss";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: base.$navbar-height;
+    z-index: 999;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &.showBackground {
+        background-color: base.$base-bg;
+        transition: all 2s;
+    }
+    &.hideBackground {
+        background: rgba(0, 0, 0, 0.1);
+        transition: all 2s;
+    }
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logoWrapper {
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-family:fantasy;
+            width: 20%;
+            color:antiquewhite;
+        }
+
+        .navList {
+            width: 80%;
+
+            .navItemWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+
+                .navItem {
+                    .navLink {
+                        padding: 1rem;
+                        color: #ffffff;
+                        letter-spacing: 4px;
+                        &:hover {
+                            cursor: pointer;
+                            color: #333333;
+                            display: block;
+                            font-weight: 400;
+                            transform: translateY(-5px);
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

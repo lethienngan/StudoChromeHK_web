@@ -1,0 +1,153 @@
+@use "../../base.module.scss";
+.header {
+    // width: 100%;
+    height: 100vh;
+    // background-color: gray;
+    .container {
+        width: 100%;
+        height: 100%;
+        .btnLeft,
+        .btnRight {
+            position: absolute;
+            top: 50%;
+            width: 4rem;
+            height: 4rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            border-radius: 50%;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                background-color: base.$base-bg;
+                cursor: pointer;
+                border: none;
+                transform: scale(0.8);
+                transition: 0.4s ease-out;
+            }
+        }
+        .btnLeft {
+            left: 4rem;
+        }
+        .btnRight {
+            right: 4rem;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .imgItem {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                &.show {
+                    opacity: 0.7;
+                    transition: all 2s ease;
+                }
+                &.hide {
+                    opacity: 0;
+                    transition: all 2s ease;
+                }
+            }
+
+            .contentWrapper {
+                position: absolute;
+                color: antiquewhite;
+                animation: popup 1s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p,
+                h2,
+                h1 {
+                    margin: 5px 0;
+                    // transition: all 1s ease;
+                }
+                p {
+                    letter-spacing: 7px;
+                }
+                h2 {
+                    letter-spacing: 3px;
+                    font-size: 3rem;
+                }
+                h1 {
+                    letter-spacing: 2px;
+                    font-size: 5rem;
+                }
+            }
+        }
+        .checkOutWrapper {
+            position: absolute;
+            width: 200px;
+            height: 4rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            bottom: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .checkOutContent {
+                display: block;
+                width: 90%;
+                height: 3rem;
+                background-color: transparent;
+                color: antiquewhite;
+                border: 1px solid antiquewhite;
+                border-radius: 1.5rem;
+                text-align: center;
+                line-height: 3rem;
+                font-weight: 600;
+                font-size: 1.2rem;
+                &:hover {
+                    cursor: pointer;
+                    // transform: translateY(-5px);
+                    background-color: base.$base-bg;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
