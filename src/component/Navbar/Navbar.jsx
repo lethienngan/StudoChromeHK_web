@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import styles from "./Navbar.module.scss";
 function Navbar() {
     // "Home", "About", "Rooms", "Amenities", "Services"
@@ -40,7 +41,14 @@ function Navbar() {
                             <a className={styles.navLink}>Contact</a>
                         </li>
                         <li className={styles.navItem}>
-                            <a className={styles.navLink}></a>
+                            <a className={styles.navLink}>
+                                <FaFacebookSquare className={styles.socialMediaIcon} />
+                            </a>
+                        </li>
+                        <li className={styles.navItem}>
+                            <a className={styles.navLink}>
+                                <FaInstagram className={styles.socialMediaIcon} />
+                            </a>
                         </li>
                     </ul>
                 </div>

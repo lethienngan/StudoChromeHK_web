@@ -1,0 +1,42 @@
+@use "../../base.module.scss";
+.footer {
+    height: 700px;
+    width: 100vw;
+    background-color: base.$component-bg-3;
+    padding: 5rem 0;
+    .container {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .item {
+            width: 25%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: #ffffff;
+            h1{
+                margin-bottom: 2rem;
+            }
+            a {
+                margin: 1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            .itemIcon{
+                margin: .5rem;
+            }
+            .socialMediaIcon{
+                margin: .5rem;
+                font-size: 2rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,6 +1,10 @@
 // Bass SCSS
 $base-bg: #AA8453;
-$navbar-height: 3rem;
+$component-bg-white: #ffffff;
+$component-bg-1: #F6F1F0;
+$component-bg-2: #D5C9BB;
+$component-bg-3: #181A20;
+$navbar-height: 3.5rem;
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -12,4 +16,8 @@ $navbar-height: 3rem;
 }
 li {
     list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }

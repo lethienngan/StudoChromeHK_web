@@ -1,0 +1,90 @@
+@use "../../base.module.scss";
+.contact {
+    margin: 0 auto;
+    position: relative;
+    background-color: base.$component-bg-2;
+    width: 100vw;
+    padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+
+    .contentContainer {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        margin: 2rem auto;
+
+        .greeting {
+            min-width: 250px;
+            padding: 1rem;
+            color: #aa8453;
+            letter-spacing: 3px;
+            font-weight: 500;
+            li {
+                padding: 5px;
+                padding-right: 2rem;
+                list-style: disc;
+                border-bottom: 1px solid #aa8453;
+            }
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            margin: 0 auto;
+            margin-left: 0;
+            padding: 1rem;
+            h1 {
+                font-size: 3rem;
+                letter-spacing: 10px;
+                font-family: serif;
+                font-weight: normal;
+            }
+            p {
+                // font-size: 3rem;
+                letter-spacing: 2px;
+                // font-family: serif;
+            }
+        }
+    }
+    .contactContainer {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 450px;
+        .item {
+            position: relative;
+            min-width: 350px;
+            height: 120px;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            background-color: base.$component-bg-white;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            .itemIcon{
+                margin-left: 2rem;
+                font-size: 2rem;
+            }
+            .itemContent{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
