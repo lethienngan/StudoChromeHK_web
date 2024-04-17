@@ -3,7 +3,7 @@
     margin: 0 auto;
     position: relative;
     background-color: base.$component-bg-2;
-    width: 100vw;
+    width: 100%;
     padding: 7rem 0;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,9 @@
         align-items: baseline;
         justify-content: center;
         margin: 2rem auto;
-
+        @media only screen and (max-width: 1100px) {
+            flex-direction: column;
+        }
         .greeting {
             min-width: 250px;
             padding: 1rem;
@@ -44,46 +46,203 @@
             h1 {
                 font-size: 3rem;
                 letter-spacing: 10px;
-                font-family: serif;
                 font-weight: normal;
             }
             p {
-                // font-size: 3rem;
                 letter-spacing: 2px;
-                // font-family: serif;
             }
         }
     }
+
     .contactContainer {
-        width: 80%;
+        width: 70%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
+        margin: 2rem 0;
         margin-left: 450px;
-        .item {
-            position: relative;
-            min-width: 350px;
-            height: 120px;
-            margin-top: 2rem;
-            margin-left: 2rem;
-            background-color: base.$component-bg-white;
+        margin-right: 1rem;
 
+        .contactInfo {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            .itemIcon{
-                margin-left: 2rem;
-                font-size: 2rem;
-            }
-            .itemContent{
+            flex-wrap: wrap;
+            width: 100%;
+
+            .item {
+                position: relative;
+                min-width: 320px;
+                height: 120px;
+                margin-right: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                // margin-left: 2rem;
+                background-color: base.$component-bg-white;
+
                 display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                .itemIcon {
+                    margin-left: 2rem;
+                    font-size: 2rem;
+                }
+                .itemContent {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin-left: 2rem;
+                }
+            }
+        }
+        .contactForm {
+            // height: fit-content;
+            width: 100%;
+            max-width: 1025px;
+            background-color: base.$component-bg-white;
+            margin: 2rem 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            align-self: flex-start;
+
+            h2,
+            input,
+            textarea {
+                width: 80%;
+            }
+            h2 {
+                margin: 2rem;
+                padding: 1rem;
+                // width: 600px;
+                letter-spacing: 10px;
+                font-weight: normal;
+                color: base.$base-bg;
+                border-bottom: 1px solid base.$base-bg;
+            }
+            input {
+                margin: 1rem;
+                padding: 0.5rem;
+                height: 60px;
+                // width: 600px;
+                border: none;
+                border-bottom: 1px solid base.$component-bg-2;
+                color: base.$base-bg;
+                font-size: 1.1rem;
+                &:focus {
+                    outline: none;
+                }
+            }
+            textarea {
+                margin: 1rem;
+                margin-top: 3rem;
+                padding: 0.5rem;
+                height: 200px;
+                // width: 600px;
+                border: none;
+                border-bottom: 1px solid base.$component-bg-2;
+                color: base.$base-bg;
+                font-size: 1.1rem;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                margin: 1rem;
+                padding: 0 5px;
+                height: 60px;
+                width: 160px;
+                background-color: base.$base-bg;
+                color: #ffffff;
+                border: none;
+                transition: all 0.3s;
+                letter-spacing: 2px;
+                font-size: 12px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #333333;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        @media only screen and (max-width: 1500px) {
+            .contactForm {
+                width: 670px;
+            }
+        }
+        @media only screen and (max-width: 1100px) {
+            margin: unset;
+            width: 90%;
+            // display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .contactInfo {
+                width: 100%;
                 flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                margin-left: 2rem;
+                align-items: center;
+                .item {
+                    // width: 100%;
+                    margin-right: unset;
+                    width: 400px;
+                }
+            }
+            .contactForm {
+                width: 100%;
+                align-self: center;
+                padding: unset;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            margin: 0 1rem;
+            flex-wrap: wrap;
+            .contactInfo {
+                .item {
+                    width: 100%;
+                    min-width: unset;
+                    font-size: 1rem;
+                    margin: unset;
+                    margin-bottom: 1rem;
+                    .itemIcon {
+                        margin-left: 3rem;
+                        font-size: 2rem;
+                    }
+                    .itemContent {
+                        margin-left: 3rem;
+                    }
+                }
+            }
+            .contactForm {
+                width: 100%;
+                h2 {
+                    width: 80%;
+                    font-size: 1rem;
+                    margin-left: 0;
+                }
+                input,
+                textarea {
+                    font-size: 12px;
+                }
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            .contactInfo {
+               .item{
+                .itemIcon {
+                    margin-left: 1rem;
+                    font-size: 1.5rem;
+                }
+                .itemContent {
+                    margin-left: 1rem;
+                }
+               }
             }
         }
     }

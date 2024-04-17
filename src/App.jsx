@@ -9,6 +9,7 @@ import Testimonials from "./component/Testimonials/Testimonials";
 import Blog from "./component/Blog/Blog";
 import Contact from "./component/Contact/Contact";
 import Footer from "./component/Footer/Footer";
+// import { Helmet } from "react-helmet";
 
 function App() {
     return (

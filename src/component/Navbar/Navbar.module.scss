@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: base.$navbar-height;
+    // height: 4rem;
     z-index: 9999;
     background: transparent;
     display: flex;
@@ -36,6 +36,17 @@
             font-family: fantasy;
             width: 20%;
             color: antiquewhite;
+            img {
+                display: block;
+                height: 3rem;
+                transform: scale(0.8);
+                transition: all 0.5s;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1);
+                    transition: all 0.5s;
+                }
+            }
         }
 
         .navList {
@@ -52,7 +63,7 @@
                         padding: 1rem;
                         color: #ffffff;
                         letter-spacing: 4px;
-                        .socialMediaIcon{
+                        .socialMediaIcon {
                             // height: 100%;
                             font-size: 2rem;
                         }
@@ -68,5 +79,43 @@
                 }
             }
         }
+        @media only screen and (max-width: 1200px) {
+            width: 80%;
+        }
+        @media only screen and (max-width: 900px) {
+            .navList {
+                .navItemWrapper {
+                    .navItem {
+                        .navLink {
+                            padding: 0.5rem;
+                            letter-spacing: 2px;
+                            .socialMediaIcon {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            // flex-direction: column;
+            .navList {
+                .navItemWrapper {
+                    .navItem {
+                        .navLink {
+                            padding: 0.5rem;
+                            letter-spacing: normal;
+                            font-size: 12px;
+                            .socialMediaIcon {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        height: fit-content;
     }
 }

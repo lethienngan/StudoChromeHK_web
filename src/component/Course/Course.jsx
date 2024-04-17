@@ -23,27 +23,65 @@ function Course() {
             </div>
             <div className={styles.swiperContainer}>
                 <Swiper
-                  slidesPerView={'auto'}
-                  centeredSlides={true}
-                  spaceBetween={30}
-                  loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Pagination]}
+                    slidesPerView={"auto"}
+                    centeredSlides={true}
+                    spaceBetween={30}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
                     className={styles.mySwiper}
                 >
-                    <SwiperSlide className={styles.swiperSlide}> <img src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 2</SwiperSlide>
                     <SwiperSlide className={styles.swiperSlide}>
-                        <img src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg" alt="" />
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt="Practicing yoga outdoors in nature"
+                        />
                     </SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 4</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}> <img src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 6</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 7</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 8</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 9</SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt="Performing bodyweight exercises for fitness"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt="Engaging in mindfulness meditation for stress relief"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        {" "}
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt=""
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <img
+                            src="https://rco-design.com/wp-content/uploads/2020/01/ryan-paonessa_status_featured-e-1440x961.jpg"
+                            alt=""
+                        />
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </section>

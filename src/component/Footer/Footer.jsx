@@ -1,12 +1,18 @@
 import { FaArrowRight, FaFacebookSquare, FaInstagram, FaTwitter } from "react-icons/fa";
 import styles from "./Footer.module.scss";
-
+import logo from "../../../public/Logo_TAO_white.svg";
 function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.item}>
-                    <h1>LOGO here</h1>
+                    <img
+                        src={logo}
+                        alt=""
+                        onClick={() => {
+                            window.location.href = "/";
+                        }}
+                    />
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non excepturi dolore, nostrum
                         similique ratione numquam eum deserunt! Dolore veritatis harum laudantium eveniet! Hic
@@ -15,31 +21,34 @@ function Footer() {
                 </div>
                 <div className={styles.item}>
                     <h1>Our Services</h1>
-                    <a href="">
-                        <FaArrowRight className={styles.itemIcon}/> Service name
+                    <a href="https://bookings.vibefam.com/studiochromehk/classes" className={styles.title}>
+                        <FaArrowRight className={styles.itemIcon} /> Service name
                     </a>
-                    <a href="">
-                        <FaArrowRight className={styles.itemIcon}/> Service name
+                    <a href="https://bookings.vibefam.com/studiochromehk/classes" className={styles.title}>
+                        <FaArrowRight className={styles.itemIcon} /> Service name
                     </a>
-                    <a href="">
-                        <FaArrowRight className={styles.itemIcon}/> Service name
+                    <a href="https://bookings.vibefam.com/studiochromehk/classes" className={styles.title}>
+                        <FaArrowRight className={styles.itemIcon} /> Service name
                     </a>
                 </div>
                 <div className={styles.item}>
                     <h1>Information</h1>
-                    <a href="">
-                        <FaArrowRight className={styles.itemIcon}/> Contact us
+                    <a href="#contact" className={styles.title}>
+                        <FaArrowRight className={styles.itemIcon} /> Contact us
+                    </a>
+                    <a href="#about" className={styles.title}>
+                        <FaArrowRight className={styles.itemIcon} /> About
                     </a>
                 </div>
                 <div className={styles.item}>
                     <h1>Follow Us</h1>
-                    <a href="" className={styles.socialMediaIcon}>
+                    <a href="https://www.instagram.com/studiochromehk/" className={styles.socialMediaIcon}>
                         <FaInstagram />
                     </a>
                     <a href="" className={styles.socialMediaIcon}>
                         <FaTwitter />
                     </a>
-                    <a href="" className={styles.socialMediaIcon}>
+                    <a href="https://www.facebook.com/studiochromehk/" className={styles.socialMediaIcon}>
                         <FaFacebookSquare />
                     </a>
                 </div>

@@ -1,6 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import styles from "./Services.module.scss";
+import { GrYoga } from "react-icons/gr";
+import { IoFitnessOutline } from "react-icons/io5";
+import { CgGym } from "react-icons/cg";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -33,10 +37,66 @@ function Services() {
                     modules={[Pagination]}
                     className={styles.mySwiper}
                 >
-                    <SwiperSlide className={styles.swiperSlide}>Slide 1</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 2</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 3</SwiperSlide>
-                    <SwiperSlide className={styles.swiperSlide}>Slide 4</SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <div className={styles.card}>
+                            <GrYoga className={styles.cardIcon} />
+                            <p className={styles.cardTitle}>Yoga for Children</p>
+                            <p className={styles.cardSubtitle}>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolorum.
+                            </p>
+                            <div className={styles.cardNumber}>
+                                <p>01</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <div className={styles.card}>
+                            <IoFitnessOutline className={styles.cardIcon} />
+                            <p className={styles.cardTitle}>Fitness</p>
+                            <p className={styles.cardSubtitle}>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolorum.
+                            </p>
+                            <div className={styles.cardNumber}>
+                                <p>02</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <div className={styles.card}>
+                            <CgGym className={styles.cardIcon} />
+                            <p className={styles.cardTitle}>Pole Dancing</p>
+                            <p className={styles.cardSubtitle}>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolorum.
+                            </p>
+                            <div className={styles.cardNumber}>
+                                <p>03</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <div className={styles.card}>
+                            <GrYoga className={styles.cardIcon} />
+                            <p className={styles.cardTitle}>Pole Dancing</p>
+                            <p className={styles.cardSubtitle}>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolorum.
+                            </p>
+                            <div className={styles.cardNumber}>
+                                <p>04</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlide}>
+                        <div className={styles.card}>
+                            <GrYoga className={styles.cardIcon} />
+                            <p className={styles.cardTitle}>Pole Dancing</p>
+                            <p className={styles.cardSubtitle}>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolorum.
+                            </p>
+                            <div className={styles.cardNumber}>
+                                <p>05</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </section>
